@@ -12,7 +12,8 @@ git init
 ```
 ls -a
 ```
-<img width="462" alt="截屏2025-04-16 10 04 35" src="https://github.com/user-attachments/assets/342567a1-ef1c-4f58-be03-04e6195846f8" />
+xxx@xxx-Pro upload % ls -a
+.               ..              .git            main.cpp
 
 ### 3. 【根据需求可选或略过】修改分支设置（迎合现代软件开发的命名惯例）
 #### 3.1 全局配置
@@ -59,9 +60,10 @@ git commit -m "Initial commit with main.cpp"
 ```
 git branch
 ```
-xxx@zhangjiandeMacBook-Pro upload % git branch
+xxx@xxx-Pro upload % git branch
 * main
-* 
+
+
 ### 8. 在GitHub上创建一个新的仓库
 #### 8.1 点击GitHub主页右上角的“+”按钮，然后选择“New repository”；
 #### 8.2 在“Repository name”字段中输入您的仓库名称。您可以选择添加一个描述（可选）并选择是将仓库设置为公开还是私有；
@@ -73,6 +75,7 @@ xxx@zhangjiandeMacBook-Pro upload % git branch
 ```
 git remote add origin https://github.com/username/repository.git
 ```
+
 
 
 ## 二、拉取github上的仓库到本地Git
