@@ -55,6 +55,8 @@ git add .
 提交：
 ```
 git commit -m "Initial commit with main.cpp"
+# -m:表示提交的消息，但必须有一条。
+
 ```
 检查：
 ```
@@ -111,7 +113,31 @@ git pull origin main
 [如何跳过不需要上传的文件夹](https://github.com/Sun-Moon-1314/git-demo/issues/7)
 
 ## 二、拉取github上的仓库到本地Git
+### 1. 克隆SSH
 ```
-git clone Repository-SSH
+git clone <Repository-SSH> # 自动创建Repository-SSH文件夹
+cd <Repository-SSH>
 ```
 <img width="1315" alt="截屏2025-04-14 11 48 26" src="https://github.com/user-attachments/assets/1d11dad7-9875-4e69-a617-d6bc8892ab92" />
+### 2. 查看Git状态
+查看当前分支的状态，包括未跟踪的文件和待提交的更改
+```
+git status
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
