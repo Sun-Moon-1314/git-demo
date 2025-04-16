@@ -88,8 +88,8 @@ git push -u origin main
 写入对象中: 100% (5/5), 604 字节 | 604.00 KiB/s, 完成.
 总共 5（差异 1），复用 0（差异 0），包复用 0（来自  0 个包）
 remote: Resolving deltas: 100% (1/1), done.
-To github.com:Sun-Moon-1314/upload.git
-   fd04633..faf7f69  main -> main
+To github.com:xxx/upload.git
+   xxx..xxx  main -> main
 分支 'main' 设置为跟踪 'origin/main'。
 ```
 *注：如果github有更改，需要先更新*
