@@ -102,6 +102,9 @@ git pull
 ```
 git pull origin main
 ```
+```
+git pull -u origin main # -u:设置默认上传分支
+```
 - origin：这是远程仓库的默认名称。当您克隆一个 GitHub 仓库时，Git 会自动将这个远程仓库命名为 origin。这个名字是一个约定俗成的默认值，您可以在需要时更改或添加其他远程仓库。
 - main：这是您希望从中拉取更新的分支的名称。在许多项目中，main 是默认的主分支名称。以前，master 常被用作主分支的名称，但近年来，main 正逐渐成为新的标准。
 来自 github.com:xxx/upload
