@@ -140,9 +140,18 @@ git checkout -b feature-branch
 git branch
 ```
 
+### 5. 提交
+跟上面git add,commit过程一致
 
-
-
+### 6. 合并到主分支
+切换回主分支
+```
+git checkout main
+```
+融合
+```
+git merge feature-branch
+```
 
 
 
