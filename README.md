@@ -105,7 +105,9 @@ git pull origin main
 来自 github.com:xxx/upload
  * branch            main       -> FETCH_HEAD
 已经是最新的。
+
 [如何删除已经上传的内容：以build为例](https://github.com/Sun-Moon-1314/git-demo/issues/6)
+[如何跳过不需要上传的文件夹](https://github.com/Sun-Moon-1314/git-demo/issues/7)
 
 ## 二、拉取github上的仓库到本地Git
 ```
