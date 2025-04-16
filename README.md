@@ -1,5 +1,5 @@
 # git 命令记录
-[视频教程链接](https://youtu.be/RGOj5yH7evk](https://www.freecodecamp.org/news/git-and-github-crash-course/)
+[视频教程链接]([https://youtu.be/RGOj5yH7ev](https://www.freecodecamp.org/news/git-and-github-crash-course/))
 
 ## 一、在本地创建项目并上传Github
 ### 1. 创建项目文件夹
