@@ -92,7 +92,7 @@ To github.com:xxx/upload.git
    xxx..xxx  main -> main
 分支 'main' 设置为跟踪 'origin/main'。
 ```
-*注：如果github有更改，需要先更新*
+*注：如果github有更改，需要先拉取 GitHub到本地*
 ```
 git pull
 ```
