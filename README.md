@@ -76,6 +76,24 @@ xxx@xxx-Pro upload % git branch
 git remote add origin https://github.com/username/repository.git
 ```
 
+### 10. 推送提交到 GitHub
+将本地的提交推送到 GitHub 上的远程仓库
+```
+git push -u origin main
+```
+*注：如果github有更改，需要先更新*
+```
+git pull
+```
+适用于已经配置好远程跟踪分支的情况
+```
+git pull origin main
+```
+- origin：这是远程仓库的默认名称。当您克隆一个 GitHub 仓库时，Git 会自动将这个远程仓库命名为 origin。这个名字是一个约定俗成的默认值，您可以在需要时更改或添加其他远程仓库。
+- main：这是您希望从中拉取更新的分支的名称。在许多项目中，main 是默认的主分支名称。以前，master 常被用作主分支的名称，但近年来，main 正逐渐成为新的标准。
+来自 github.com:xxx/upload
+ * branch            main       -> FETCH_HEAD
+已经是最新的。
 
 
 ## 二、拉取github上的仓库到本地Git
