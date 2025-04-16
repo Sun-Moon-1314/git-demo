@@ -118,13 +118,16 @@ git pull origin main
 git clone <Repository-SSH> # 自动创建Repository-SSH文件夹
 cd <Repository-SSH>
 ```
+
 <img width="1315" alt="截屏2025-04-14 11 48 26" src="https://github.com/user-attachments/assets/1d11dad7-9875-4e69-a617-d6bc8892ab92" />
+
 ### 2. 查看Git状态
 查看当前分支的状态，包括未跟踪的文件和待提交的更改
 ```
 git status
 ```
-
+### 3. 密钥生成与上传
+[本机密钥操作](https://github.com/Sun-Moon-1314/git-demo/issues/1)
 
 
 
