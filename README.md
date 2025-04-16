@@ -80,6 +80,17 @@ git remote add origin https://github.com/username/repository.git
 将本地的提交推送到 GitHub 上的远程仓库
 ```
 git push -u origin main
+
+枚举对象中: 6, 完成.
+对象计数中: 100% (6/6), 完成.
+使用 11 个线程进行压缩
+压缩对象中: 100% (4/4), 完成.
+写入对象中: 100% (5/5), 604 字节 | 604.00 KiB/s, 完成.
+总共 5（差异 1），复用 0（差异 0），包复用 0（来自  0 个包）
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:Sun-Moon-1314/upload.git
+   fd04633..faf7f69  main -> main
+分支 'main' 设置为跟踪 'origin/main'。
 ```
 *注：如果github有更改，需要先更新*
 ```
