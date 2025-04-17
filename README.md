@@ -173,5 +173,5 @@ git branch -d feature-branch
 git commit -am "修复了bug并更新了文档"
 ```
 ```
-test conflits2
+test conflits1
 ```
