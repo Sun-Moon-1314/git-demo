@@ -203,3 +203,48 @@ git reset --hard <commit>
 git reset --hard HEAD
 ```
 注意：*不可逆的操作，所有未提交的更改都会被永久删除，无法恢复*
+
+## 三、Fork开源项目到自己github，开发管理等
+
+### 1. 添加远程仓库
+```
+git remote add upstream <original-repo-url>
+```
+### 2. 查看远程仓库
+```
+git remote -v
+```
+### 3. 获取上游更新
+```
+git fetch upstream
+```
+### 4. 切换到本地主分支
+```
+git checkout main
+```
+### 5. 合并上游更新到本地主分支
+```
+git merge upstream/main
+```
+### 6. 推送更新到你的 Fork 仓库
+```
+git push origin main
+```
+### 7. 创建开发分支
+```
+git checkout -b feature-branch
+```
+### 8. 开发和提交更改
+```
+git add .
+git commit -m "Add new feature"
+```
+### 9. 合并开发分支到本地主分支
+```
+git checkout main
+git merge feature-branch
+```
+### 10. 推送合并后的更改到你的 Fork 仓库
+```
+git push origin main
+```
