@@ -152,11 +152,15 @@ git branch
 跟上面 <add, commit, push> 过程一致
 
 ### 6. 合并到主分支
-切换 <主分支/功能分支>
+- 切换 <主分支/功能分支>
 ```
 git checkout main/feature-branch
 ```
-融合分支: 功能分支->主分支
+- 查看分支不同
+```
+git diff <分支名称>
+```
+- 融合分支: 功能分支->主分支
 ```
 git merge feature-branch
 ```
