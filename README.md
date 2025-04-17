@@ -15,12 +15,17 @@ git init
 ls -a
 ```
 xxx@xxx-Pro upload % ls -a
-.               ..              .git            main.cpp
-
+```
+.        ..        .git        main.cpp
+```
 ### 3. 【根据需求可选或略过】修改分支设置（迎合现代软件开发的命名惯例）
 #### 3.1 全局配置
 ```
-git config --global init.defaultBranch <名称>  # 例如：git config --global init.defaultBranch main
+git config --global init.defaultBranch <名称>
+```
+例如：
+```  
+git config --global init.defaultBranch main
 ```
 #### 3.2 重命名当前分支
 如果你已经初始化了仓库，并且想要将当前的“master”分支重命名为“main”或其他名称，可以使用以下命令：
@@ -58,15 +63,18 @@ git add .
 ```
 git commit -m "Initial commit with main.cpp"
 # -m:表示提交的消息，但必须有一条。
-
 ```
+
 检查：
 ```
 git branch
 ```
+查看当前分支
+```
 xxx@xxx-Pro upload % git branch
 * main
-
+```
+星号*: 当前所在分支
 
 ### 8. 在GitHub上创建一个新的仓库
 #### 8.1 点击GitHub主页右上角的“+”按钮，然后选择“New repository”；
@@ -141,14 +149,14 @@ git branch
 ```
 
 ### 5. 提交
-跟上面git add,commit过程一致
+跟上面 <add, commit, push> 过程一致
 
 ### 6. 合并到主分支
-切换回主分支
+切换 <主分支/功能分支>
 ```
-git checkout main
+git checkout main/feature-branch
 ```
-融合
+融合分支: 功能分支->主分支
 ```
 git merge feature-branch
 ```
