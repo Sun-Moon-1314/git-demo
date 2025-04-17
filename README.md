@@ -164,3 +164,11 @@ git diff <分支名称>
 ```
 git merge feature-branch
 ```
+- 删除分支: 需先切回主分支
+```
+git branch -d feature-branch
+```
+- add + commit命令，适用于已经add过的文件
+```
+git commit -am "修复了bug并更新了文档"
+```
