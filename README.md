@@ -172,3 +172,34 @@ git branch -d feature-branch
 ```
 git commit -am "修复了bug并更新了文档"
 ```
+- add执行后添加了错误信息，恢复使用
+```
+git reset
+git reset README.md
+```
+- commit执行后上传了错误信息，恢复使用
+```
+git reset HEAD~1 # HEAD：指向最后一次提交的指针
+```
+- 根据提交的哈希值退回特定的版本
+```
+git log
+commit xxxxx63923c29cbd5372db604b2b4ebb6dfbbd46
+Author: xxx <xxx@users.noreply.github.com>
+Date:   Thu Apr 17 10:29:39 2025 +0800
+
+    dsad
+
+```
+```
+git reset xxxxx63923c29cbd5372db604b2b4ebb6dfbbd46
+```
+- 将当前分支回滚到某个特定的提交,<commit> 是你想回滚到的提交的哈希值
+```
+git reset --hard <commit>
+```
+- 这将工作目录和索引重置到当前分支的最新提交状态，丢弃所有未提交的更改
+```
+git reset --hard HEAD
+```
+注意：*不可逆的操作，所有未提交的更改都会被永久删除，无法恢复*
