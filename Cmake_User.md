@@ -1,4 +1,5 @@
 # CMake使用说明
+[CMake视频讲解](https://youtu.be/maDhQ57-gr8)
 
 ## 一. cmake原理
 - CMake 是一个跨平台的构建工具，主要用于管理软件项目的编译过程。通过简单的配置文件（CMakeLists.txt），它可以生成本地构建系统（如 Makefile 或 Visual Studio 项目文件）。
@@ -159,7 +160,7 @@ target_link_libraries(AlgorithmsLibrary SomeLibrary::SomeLibrary) # 链接第三
      rm -rf build
      ```
    - 保留build文件夹，删除build里面的文件
-     ```
+     ```bash
      rm -rf build/*
      ```
 
