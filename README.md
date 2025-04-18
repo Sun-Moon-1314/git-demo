@@ -1,4 +1,4 @@
-# 1. cmake使用说明
+# 1. CMake使用说明
 [Cmake_User.md](./Cmake_User.md)
-# 2. git使用说明
+# 2. Git使用说明
 [Git_User.md](./Git_User.md)
