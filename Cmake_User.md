@@ -162,3 +162,68 @@ target_link_libraries(AlgorithmsLibrary SomeLibrary::SomeLibrary) # 链接第三
      ```
      rm -rf build/*
      ```
+
+## 三. 常用 CMake 命令
+
+1. **生成构建系统**
+   ```bash
+   cmake -S . -B build
+   ```
+   - 指定源代码目录和构建目录，生成构建系统。
+
+2. **构建项目**
+   ```bash
+   cmake --build build
+   ```
+   - 使用生成的构建系统进行编译。
+
+3. **清理构建目录**
+   - 删除整个构建目录：
+     ```bash
+     rm -rf build
+     ```
+   - 仅删除构建目录中的内容：
+     ```bash
+     rm -rf build/*
+     ```
+
+4. **指定构建类型**
+   ```bash
+   cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+   ```
+   - 指定构建类型为 Release（优化后的版本）。
+   - 其他可选值：`Debug`、`RelWithDebInfo`、`MinSizeRel`。
+
+5. **重新配置项目**
+   ```bash
+   cmake -S . -B build
+   ```
+   - 如果修改了 `CMakeLists.txt`，需要重新运行此命令以更新构建系统。
+
+6. **安装项目**
+   ```bash
+   cmake --install build
+   ```
+   - 安装构建的目标到指定的安装目录（需在 `CMakeLists.txt` 中配置 `install` 规则）。
+
+7. **生成特定生成器的构建系统**
+   - 使用 Ninja：
+     ```bash
+     cmake -S . -B build -G "Ninja"
+     ```
+   - 使用 Unix Makefiles：
+     ```bash
+     cmake -S . -B build -G "Unix Makefiles"
+     ```
+
+8. **检查 CMake 版本**
+   ```bash
+   cmake --version
+   ```
+   - 查看当前安装的 CMake 版本。
+
+9. **显示帮助信息**
+   ```bash
+   cmake --help
+   ```
+   - 显示 CMake 的帮助信息和可用选项。
