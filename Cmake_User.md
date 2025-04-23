@@ -1,4 +1,5 @@
 # CMake使用说明
+[CMake视频讲解](https://youtu.be/maDhQ57-gr8)
 
 ## 一. cmake原理
 - CMake 是一个跨平台的构建工具，主要用于管理软件项目的编译过程。通过简单的配置文件（CMakeLists.txt），它可以生成本地构建系统（如 Makefile 或 Visual Studio 项目文件）。
@@ -125,17 +126,32 @@ target_link_libraries(AlgorithmsLibrary SomeLibrary::SomeLibrary) # 链接第三
          ```
      - **Windows 系统**：
        - 使用 Visual Studio 构建：
-         ```bash
+         ```shell
+         # 主目录运行
          cmake -S . -B build -G "Visual Studio 17 2022"
+         # build命令运行
          cmake .. -G "Visual Studio 17 2022"
          - S .：指定源代码目录为当前目录（.）。
          - B build：指定生成的构建系统存放在 build 目录中。
          - G "Visual Studio 16 2019"：指定生成器为 Visual Studio 2019，生成适用于 Visual Studio 的项目文件。
+         使用该方式构建需要使用vs运行，如果想直接运行就不指定目标。
 
+         如果在子目录中存在多个文件，但其中有几个不需要,就使用: 
+         file(GLOB ...)
+         ```
+
+         <img width="1315" alt="截屏2025-04-14 11 48 26" src="picture/截屏2025-04-19 14.04.00.png" />
+
+         ```
          cmake --build build --config Release
          --build build：使用 build 目录中的构建系统进行编译。
          --config Release：指定构建配置为 Release 模式（优化后的版本，适合发布）。
          ```
+
+         ```shell
+         Remove-Item -Path ".\build\*"
+         ```
+
      - **macOS 系统**：
        - 使用 Xcode 构建：
          ```bash
@@ -159,7 +175,7 @@ target_link_libraries(AlgorithmsLibrary SomeLibrary::SomeLibrary) # 链接第三
      rm -rf build
      ```
    - 保留build文件夹，删除build里面的文件
-     ```
+     ```bash
      rm -rf build/*
      ```
 
@@ -186,7 +202,10 @@ target_link_libraries(AlgorithmsLibrary SomeLibrary::SomeLibrary) # 链接第三
      ```bash
      rm -rf build/*
      ```
-
+     Windows中使用
+     ```shell
+      Remove-Item -Path ".\build\*"
+     ```
 4. **指定构建类型**
    ```bash
    cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
