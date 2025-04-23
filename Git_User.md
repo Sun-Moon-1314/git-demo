@@ -83,9 +83,22 @@ xxx@xxx-Pro upload % git branch
 <img width="1495" alt="截屏2025-04-16 09 59 52" src="https://github.com/user-attachments/assets/ee922b8a-7101-4e50-a372-0e5cf4590a72" />
 
 ### 9. 将本地仓库与GitHub仓库关联
-在本地终端中，将您的本地Git仓库与刚刚在GitHub上创建的远程仓库关联。假设您的GitHub仓库URL是https://github.com/username/repository.git，您可以使用以下命令：
+在本地终端中，将您的本地Git仓库与刚刚在GitHub上创建的远程仓库关联。
+```zsh
+git remote -v
+```
+假设您的GitHub仓库URL是https://github.com/username/repository.git，您可以使用以下命令：
 ```zsh
 git remote add origin https://github.com/username/repository.git
+```
+更换链接仓库地址
+```zsh
+git remote set-url origin git@github.com:Sun-Moon-1314/My_Private_RL.git
+```
+删除再添加
+```zsh
+git remote remove origin
+git remote add origin git@github.com:Sun-Moon-1314/My_Private_RL.git
 ```
 
 ### 10. 推送提交到 GitHub
@@ -304,7 +317,76 @@ source ~/.bash_profile
 rm -f ~/.zcompdump
 compinit
 ```
-## 四. 特殊情况
+
+## 四. 设置忽略上传的文件
+在 Git 项目中，如果你想让某些文件或文件夹**不被上传到远程仓库**，可以通过配置 `.gitignore` 文件来实现。
+
+### 步骤如下：
+
+1. **在项目根目录下创建 `.gitignore` 文件**（如果还没有的话）：
+   ```bash
+   touch .gitignore
+   ```
+
+2. **在 `.gitignore` 文件中添加你想忽略的文件或文件夹**，比如：
+
+   ```
+   # 忽略所有的 .log 文件
+   *.log
+
+   # 忽略 node_modules 文件夹
+   node_modules/
+
+   # 忽略所有 .pyc 文件
+   *.pyc
+
+   # 忽略某个具体文件
+   secret_config.py
+   ```
+
+3. **保存 `.gitignore` 文件**，Git 就会自动忽略这些文件或文件夹。
+
+---
+
+### 常见用法举例
+
+- 忽略所有 `.log` 文件：  
+  ```
+  *.log
+  ```
+
+- 忽略某个文件夹及其内容：  
+  ```
+  myfolder/
+  ```
+
+- 忽略所有 `.env` 文件：  
+  ```
+  *.env
+  ```
+
+- 忽略所有以 `temp` 开头的文件：  
+  ```
+  temp*
+  ```
+
+---
+
+### 注意事项
+
+- `.gitignore` 只能忽略**未被 Git 跟踪**的文件。  
+  如果某个文件已经被提交过，需要先用下面命令将其从版本库中移除（但保留本地文件）：
+  ```bash
+  git rm --cached 文件名
+  ```
+
+- 编辑完 `.gitignore` 后，建议提交到仓库：
+  ```bash
+  git add .gitignore
+  git commit -m "添加.gitignore文件"
+  ```
+
+## 五. 特殊情况
 
 - z键无法输入到vscode中的终端
 <img width="1495" alt="z无法输入到zsh" src="picture/截屏2025-04-18 12.11.14.png" />
